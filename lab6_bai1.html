@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai1</title>
+</head>
+<body>
+    <h2>Bai 1:kiem tra so chan le</h2>
+    <input type="number" id="so" placeholder="Nhap mot so">
+    <br><br>
+    <button onclick="kiemTraSo()">Kiem tra</button>
+    <p id="ketqua"></p>
+    <script>
+        function kiemTraSo(){
+            let so = document.getElementById("so").value;
+            if (so % 2 === 0){
+                document.getElementById("ketqua").innerHTML = so + " la so chan";
+            }
+            else{
+                document.getElementById("ketqua").innerHTML = so + " la so le";
+            }
+        }
+    </script>
+</body>
+</html>

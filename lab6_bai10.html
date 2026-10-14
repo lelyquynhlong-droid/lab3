@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai10</title>
+</head>
+<body>
+    <h2>Bai 10: May tinh don gian</h2>
+    <label for="">Nhap so thu 1:</label>
+    <input type="text" id="so1" name="so1">
+    <br>
+    <label for="">Nhap so thu 2:</label>
+    <input type="text" id="so2" name="so2">
+    <br>
+    <button onclick="tinhToan('+')">+</button>
+    <button onclick="tinhToan('-')">-</button>
+    <button onclick="tinhToan('*')">*</button>
+    <button onclick="tinhToan('/')">/</button>
+    <p id="ketqua"></p>
+    <script>
+        function tinhToan(toanTu) {
+            var so1 = parseFloat(document.getElementById('so1').value);
+            var so2 = parseFloat(document.getElementById('so2').value);
+            var ketQua;
+
+            switch (toanTu) {
+                case '+':
+                    ketQua = so1 + so2;
+                    break;
+                case '-':
+                    ketQua = so1 - so2;
+                    break;
+                case '*':
+                    ketQua = so1 * so2;
+                    break;
+                case '/':
+                    if (so2 !== 0) {
+                        ketQua = so1 / so2;
+                    } else {
+                        ketQua = 'Khong the chia cho 0';
+                    }
+                    break;
+                default:
+                    ketQua = 'Phep toan khong hop le';
+            }
+
+            document.getElementById('ketqua').innerText = 'Ket qua: ' + ketQua;
+        }
+    </script>
+</body>
+</html>

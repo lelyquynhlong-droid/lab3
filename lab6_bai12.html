@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai12</title>
+</head>
+<body>
+    <h2>Bai 12: Kiem tra nam nhuan</h2>
+    <label for="">Nhap nam:</label>
+    <input type="text" id="nam" name="nam">
+    <br>
+    <button onclick="kiemTraNamNhuan()">Kiem tra</button>
+    <script>
+        function kiemTraNamNhuan() {
+            var nam = parseInt(document.getElementById('nam').value);
+            if ((nam % 4 === 0 && nam % 100 !== 0) || nam % 400 === 0) {
+                alert(nam + ' la nam nhuan');
+            } else {
+                alert(nam + ' khong phai la nam nhuan');
+            }
+        }
+    </script>
+</body>
+</html>

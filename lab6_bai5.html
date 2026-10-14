@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai5</title>
+</head>
+<body>
+    <h2>Bai 5: Doan so may man </h2>
+    <label for="">Nhap so ban doan: </label>
+    <input type="number" id="soDoan" placeholder="hay nhap so ban doan">
+    <br><br>
+    <button onclick="doanSo()">Doan So</button>
+    <p id="ketqua"></p>
+    <script>
+        function doanSo(){
+            let soBanDoan = document.getElementById("soDoan").value;
+            let soMayMan = Math.floor(Math.random() * 100) + 1;
+            if (soBanDoan == soMayMan){
+                document.getElementById("ketqua").innerHTML = "Chuc mung ban, ban da doan dung so may man la: " + soMayMan;
+            }
+            else{
+                document.getElementById("ketqua").innerHTML = "Roi roi, so may man la: " + soMayMan;
+            }
+        }
+    </script>
+</body>
+</html>

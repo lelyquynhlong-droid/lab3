@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai4</title>
+</head>
+<body>
+    <h2>❤️Xem boi tinh yeu❤️</h2>
+    <label for="">Nhap vao ten ban</label>
+    <input type="text" id="tenban" placeholder="hay nhap ten cua ban">
+    <br><br>
+    <label for="">Nhap vao ten nguoi yeu</label>
+    <input type="text" id="tenyeu" placeholder="hay nhap ten cua nguoi yeu">
+    <br><br>
+    <button onclick="xemBoiTinhYeu()">Xem Boi Tinh Yeu</button>
+    <p id="ketqua"></p>
+    <script>
+        function xemBoiTinhYeu(){
+            let yourName = document.getElementById("tenban").value;
+            let yourLoveName = document.getElementById("tenyeu").value;
+            let loveScore = Math.floor(Math.random() * 100) + 1;
+            if (loveScore > 50){
+                document.getElementById("ketqua").innerHTML = yourName +" & " + yourLoveName +" Chuc mung ban, ty le tinh yeu cua ban la: " + loveScore + "%<br>Ban va nguoi yeu hop nhau, hay cung nhau di den ben nhau nhe!💕";
+            }
+            else{
+                document.getElementById("ketqua").innerHTML = yourName +" & " + yourLoveName +" Roi roi, ty le tinh yeu cua ban la: " + loveScore + "%<br>Ban va nguoi yeu khong hop nhau, hay dung co lam nhau dau!😭";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bulb</title>
+</head>
+<body>
+    <h2>Chuong trinh bat tat den</h2>
+    <img id="bulb" src="./bulboff.gif" alt="light" width="120px">
+    <br><br>
+    <button onclick="togglelight()">On/Off</button>
+    <script>
+        function togglelight(){
+            let toggle = document.getElementById("bulb");
+            if (toggle.src.includes("bulboff.gif")){
+                toggle.src="bulbon.gif";
+            }
+            else{
+                toggle.src="bulboff.gif";
+            }
+        }
+    </script>
+</body>
+</html>

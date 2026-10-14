@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai8</title>
+</head>
+<body>
+    <h2>Bai 8: Du doan nghe nghiep</h2>
+    <label for="tenNguoiDung">Nhap ten nguoi dung:</label>
+    <input type="text" id="tenNguoiDung" placeholder="Nhap ten nguoi dung">
+    <button onclick="duDoanNgheNghiep()">Du doan nghe nghiep</button>
+    <p id="ketqua"></p>
+    <script>
+        function duDoanNgheNghiep() {
+            let tenNguoiDung = document.getElementById("tenNguoiDung").value;
+            let ngheNghiep = ["Bác sĩ", "Kỹ sư", "Giáo viên", "Lập trình viên", "Nghệ sĩ"];
+            let ngheNghiepNgauNhien = ngheNghiep[Math.floor(Math.random() * ngheNghiep.length)];
+            let ketQua = tenNguoiDung + ", nghề nghiệp của bạn là: " + ngheNghiepNgauNhien;
+            document.getElementById("ketqua").innerHTML = ketQua;
+        }
+    </script>
+</body>
+</html>

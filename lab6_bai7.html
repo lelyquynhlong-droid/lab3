@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai7</title>
+</head>
+<body>
+    <h2>Bai 7: Xuc xac may man</h2>
+    <button onclick="lacXucXac()">Lac xuc xac</button>
+    <p id="ketqua"></p>
+    <script>
+        let ketQua = "";
+        function lacXucXac() {
+            let soMayMan = Math.floor(Math.random() * 6) + 1;
+            ketQua = "So may man la: " + soMayMan;
+            document.getElementById("ketqua").innerHTML = ketQua;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 6</title>
+</head>
+<body>
+    <h2>Bai 6 Tro choi oan tu ti</h2>
+    <label for="">Nhap vao lua chon cua ban (keo, bua, bao): </label>
+    <input type="text" id="luaChon" placeholder="hay nhap vao lua chon cua ban">
+    <br><br>
+    <button onclick="choiOanTuTi()">Choi Oan Tu Ti</button>
+    <p id="ketqua"></p>
+    <script>
+        function choiOanTuTi(){
+            let luaChon = document.getElementById("luaChon").value.toLowerCase();
+            let luaChonMay = ["keo", "bua", "bao"];
+            let luaChonNgauNhien = luaChonMay[Math.floor(Math.random() * 3)];
+            let ketQua = "";
+
+            if (luaChon === luaChonNgauNhien) {
+                ketQua = "Hoa! Cả hai đều chọn: " + luaChon;
+            } else if (
+                (luaChon === "keo" && luaChonNgauNhien === "bao") ||
+                (luaChon === "bua" && luaChonNgauNhien === "keo") ||
+                (luaChon === "bao" && luaChonNgauNhien === "bua")
+            ) {
+                ketQua = "Ban thang! Ban chon: " + luaChon + ", may chon: " + luaChonNgauNhien;
+            } else {
+                ketQua = "Ban thua! Ban chon: " + luaChon + ", may chon: " + luaChonNgauNhien;
+            }
+
+            document.getElementById("ketqua").innerHTML = ketQua;
+        }
+    </script>
+</body>
+</html>

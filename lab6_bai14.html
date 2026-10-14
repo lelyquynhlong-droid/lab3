@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai14</title>
+</head>
+<body>
+    <h2>Bai 14: Tinh chi so BMI</h2>
+    <label for="">Nhap chieu cao</label>
+    <input type="number" id="chieucao">
+    <label for="">Nhap can nang</label>
+    <input type="number" id="cannang">
+    <button onclick="tinhBMI()">Tinh BMI</button>
+    <script>
+        function tinhBMI() {
+        let chieuCao= document.getElementById("chieucao")
+        let canNang= document.getElementById("cannang")
+        let bmi=canNang/(chieuCao*chieuCao)
+        if (bmi < 18.5) {
+            document.getElementById("ketqua").innerHTML = "BMI: " + bmi + " - Gầy";
+        } else if (bmi >= 18.5 && bmi < 24.9) {
+            document.getElementById("ketqua").innerHTML = "BMI: " + bmi + " - Bình thường";
+        } else if (bmi >= 25 && bmi < 29.9) {
+            document.getElementById("ketqua").innerHTML = "BMI: " + bmi + " - Thừa cân";
+        } else {
+            document.getElementById("ketqua").innerHTML = "BMI: " + bmi + " - Béo phì";
+        }}
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai13</title>
+</head>
+<body>
+    <h2> Bai 13: Chuyen nhiet do</h2>
+    <label for="">Nhap nhiet do (C):</label>
+    <input type="text" id="nhietDo" name="nhietDo">
+    <br>
+    <button onclick="chuyenNhietDo()">Chuyen</button>\
+    <p id="ketqua"></p>
+    <script>
+        function chuyenNhietDo() {
+            var nhietDoC = parseFloat(document.getElementById('nhietDo').value);
+            var nhietDoF = (nhietDoC * 9/5) + 32;
+            document.getElementById('ketqua').innerText = nhietDoC + ' do C = ' + nhietDoF + ' do F';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai11</title>
+</head>
+<body>
+    <h2>Bai 11: Kiem tra mat khau</h2>
+
+    <label for="">Nhap mat khau:</label>
+    <input type="text" id="matKhau" name="matKhau">
+    <br>
+    <button onclick="kiemTraMatKhau()">Kiem tra</button>
+    <p id="ketqua"></p>
+    <script>
+        function kiemTraMatKhau() {
+            var matKhau = document.getElementById('matKhau').value;
+            if (matKhau.length >= 8) {
+                document.getElementById('ketqua').innerText = 'Mat khau hop le';
+            } else {
+                document.getElementById('ketqua').innerText = 'Mat khau qua ngan';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Card */
+.card {
+    width: 350px;
+    margin: 50px auto;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: white;
+    text-align: center;
+}
+
+/* Avatar */
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #3498db;
+    object-fit: cover;
+}
+
+/* Tên */
+.name {
+    font-size: 28px;
+    margin: 15px 0 5px;
+}
+
+/* Nghề nghiệp */
+.job {
+    color: #3498db;
+    margin: 5px 0 15px;
+}
+
+/* Giới thiệu */
+.intro {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Danh sách kỹ năng */
+.skills {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.skills li {
+    display: inline-block;
+    background-color: #e8f4fc;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 8px;
+}
+
+/* Nút liên hệ */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+/* Hover */
+.btn:hover {
+    background-color: #217dbb;
+}

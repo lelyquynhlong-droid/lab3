@@ -1,0 +1,232 @@
+/* CAI DAT CHUNG */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #f5f6f8;
+    line-height: 1.6;
+}
+
+/* PHAN 1: HEADER VA MENU */
+header {
+    background-color: #17202a;
+    color: white;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 5%;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 80px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.shop-info {
+    flex: 1;
+    min-width: 200px;
+}
+
+.shop-info h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.shop-info p {
+    margin: 3px 0 0;
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    background-color: #4caf50;
+    padding: 10px 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    background-color: #2e7d32;
+    transform: translateY(-2px);
+}
+
+/* PHAN 2: BANNER */
+.banner {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.about-content {
+    padding: 30px 8%;
+    text-align: center;
+    background-color: white;
+}
+
+h2 {
+    color: #17202a;
+    margin-top: 0;
+    font-size: 28px;
+}
+
+.about-content p {
+    max-width: 900px;
+    margin: 10px auto;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 24px;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #2e7d32;
+}
+
+/* PHAN 3: SAN PHAM */
+#products {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.section-description {
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.product-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.product-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    margin: 0 0 10px;
+    color: #17202a;
+}
+
+.product-info p {
+    min-height: 48px;
+    font-size: 14px;
+    color: #666;
+}
+
+.product-info span {
+    display: block;
+    color: #d32f2f;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+/* PHAN 4: LIEN HE */
+#contact {
+    padding: 35px 8%;
+    background-color: #e8f5e9;
+    text-align: center;
+}
+
+#contact p {
+    margin: 8px 0;
+}
+
+/* FOOTER */
+footer {
+    padding: 18px;
+    background-color: #17202a;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* HIEN THI TREN MAN HINH NHO */
+@media (max-width: 900px) {
+    .product-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .shop-info {
+        flex: initial;
+    }
+
+    .navigation {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .product-list {
+        grid-template-columns: 1fr;
+    }
+
+    .banner {
+        height: 200px;
+    }
+
+    .navigation a {
+        padding: 8px 12px;
+    }
+}
